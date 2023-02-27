@@ -1,0 +1,68 @@
+<div class="content">
+    <div class="headlineStatement">
+  <h1>My Watch List</h1>
+  <p>This is your watch list you can add to it at any time</p>
+  </div>
+  <button *ngIf="showAddForm==false" (click)="addFormVisibility()">Add new media</button>
+  <form [formGroup]="watchForm" (ngSubmit)="onSubmit()" *ngIf="showAddForm==true">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        formControlName="title"
+        placeholder="Title"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="genre"
+        name="genre"
+        formControlName="genre"
+        placeholder="Genre"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="director"
+        name="director"
+        formControlName="director"
+        placeholder="Director"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="year"
+        name="year"
+        formControlName="year"
+        placeholder="Year"
+      />
+    </div>
+    <div class="button-container">
+    <button class="button2" (click)="addFormVisibility()">Cancel</button> 
+    <button class="button2" type="submit">Submit</button>
+  </div>
+  </form>
+</div>
+  <div class="card-container">
+    <div class="card" *ngFor="let item of watchList">
+      <h1>{{ item.title }}</h1>
+      
+      <h2>{{ item.genre }}</h2>
+      
+      <h2>{{ item.director }}</h2>
+      
+      <h2>{{ item.year }}</h2>
+      <button (click)="onDelete(item.id)">Delete</button>
+    </div>
+</div>
+<div>
+
+<router-outlet></router-outlet>
