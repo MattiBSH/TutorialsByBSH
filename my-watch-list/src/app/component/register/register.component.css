@@ -1,0 +1,154 @@
+
+
+footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+  .form-label{
+    font-size: 1.0rem;
+    font-weight: 200;
+    color: #333;
+    padding: 0%;
+    margin: 0%;
+}
+
+    .formTitle{
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        padding: 10%;
+        margin: auto;
+    }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link),
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.headlineStatement{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-right: 20%;
+    padding: 0;
+    margin: 5%;
+    align-content: start;
+}
+input{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5%;
+}
+button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.button2{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+form{
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-right: 20%;
+    padding: 0;
+    margin: 5%;
+    align-content: start;
+}
+h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333;
+    margin-right: 20%;
+    padding: 0;
+    margin: 5%;
+    align-content: start;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }

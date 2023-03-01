@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "watchlist-5c1b9": {
+      "hosting": {
+        "my-watch-list": [
+          "watchlist-5c1b9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "watchlist-5c1b9"
+  }
+}

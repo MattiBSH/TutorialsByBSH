@@ -93,6 +93,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "my-watch-list:build:production",
+            "firebaseProject": "watchlist-5c1b9",
+            "firebaseHostingSite": "watchlist-5c1b9"
+          }
         }
       }
     }

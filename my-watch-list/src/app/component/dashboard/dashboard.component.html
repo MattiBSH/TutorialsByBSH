@@ -1,0 +1,59 @@
+<div class="centrum">
+    <h1 class="title">Media and Me</h1>
+    
+    <button *ngIf="visible == false" (click)="addFormVisibility()">
+      Add new media
+    </button>
+    <br>
+    <form
+    [formGroup]="watchForm" (ngSubmit)="onSubmit()" *ngIf="visible==true"
+    >
+      <h1 class="formTitle">Add Media</h1>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          formControlName="title"
+          placeholder="Title"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="genre"
+          name="genre"
+          formControlName="genre"
+          placeholder="Genre"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="director"
+          name="director"
+          formControlName="director"
+          placeholder="Director"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="year"
+          name="year"
+          formControlName="year"
+          placeholder="Year"
+        />
+      </div>
+      <div class="button-container">
+      <button class="button2" *ngIf="visible == true" (click)="addFormVisibility()">Cancel</button>
+    <button class="button2"*ngIf="visible == true"  type="submit">Submit</button>
+    </div>
+    </form>
+    
+  </div>
+   <app-media></app-media>
