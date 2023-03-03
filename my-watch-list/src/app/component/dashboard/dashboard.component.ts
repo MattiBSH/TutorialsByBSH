@@ -9,6 +9,7 @@ type Media = {
   genre: string;
   id:number;
 }
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -17,7 +18,7 @@ type Media = {
 export class DashboardComponent implements OnInit {
   watchForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private mediaService: MediaService) { }
 
   ngOnInit(): void {
     this.watchForm = this.fb.group({
@@ -27,11 +28,15 @@ export class DashboardComponent implements OnInit {
       director: [''],
       id:['']
     });
-    
+
+    this.mediaService.getMediaListObservable().subscribe(newMediaList => {
+      this.mediaList = newMediaList;
+    });
   };
 
   title = 'my-watch-list';
-  mediaService = new MediaService();
+  mediaList: any
+
   visible = false;
   addFormVisibility() {
     console.log("Add Form Visibility"+this.visible);
@@ -43,6 +48,8 @@ export class DashboardComponent implements OnInit {
     let mediaAmount = this.mediaService.getMediaService().length;
     let media1:Media= {director:this.watchForm.value.director,genre:this.watchForm.value.genre,title:this.watchForm.value.title,year:this.watchForm.value.year,id:mediaAmount+1};
     this.mediaService.addMediaService(media1);
+    let mediaList = this.mediaService.getMediaService();
+    console.log(mediaList);
   };
 
 }
