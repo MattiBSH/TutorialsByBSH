@@ -23,7 +23,7 @@
   .form-label{
     font-size: 1.0rem;
     font-weight: 200;
-    color: #333;
+    color: #ffffff;
     padding: 0%;
     margin: 0%;
 }
@@ -31,7 +31,7 @@
     .formTitle{
         font-size: 2.5rem;
         font-weight: 600;
-        color: #333;
+        color: #ffffff;
         padding: 10%;
         margin: auto;
     }
@@ -84,10 +84,11 @@
 input{
     padding: 10px 20px;
     border-radius: 5px;
-    border: 1px solid #333;
+    border: 1px solid #ffffff;
     font-size: 1.2rem;
     font-weight: 600;
     margin: 5%;
+    
 }
 button{
     background-color: #333;
@@ -130,7 +131,7 @@ form{
 h1{
     font-size: 2.5rem;
     font-weight: 600;
-    color: #333;
+    color: #ebdfdf;
     margin-right: 20%;
     padding: 0;
     margin: 5%;
@@ -139,7 +140,7 @@ h1{
 h2{
     font-size: 1.6rem;
     font-weight: 500;
-    color: #333;
+    color: #fafafa;
     margin-right: 20%;
     padding: 0;
     margin: 5%;

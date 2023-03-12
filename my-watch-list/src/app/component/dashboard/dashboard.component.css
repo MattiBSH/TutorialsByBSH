@@ -107,6 +107,7 @@ button{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     width: 40%;
+    min-width: 100px;
     margin: 0 auto;
     margin-top: 2%;
 }
@@ -146,7 +147,7 @@ h2{
 .button-container {
     display: flex;
     justify-content: center;
-   
+    align-items: flex-start;
     margin-left: 10%;
     margin-right: 10%;
   }

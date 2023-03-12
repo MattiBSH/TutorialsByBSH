@@ -7,15 +7,19 @@ import { MediaService } from 'src/app/media_service';
   styleUrls: ['./media.component.css']
 })
 export class MediaComponent implements OnInit {
+  mediaList: any[] = [];
+
+  constructor(private mediaService: MediaService) { }
+
   ngOnInit(): void {
+    this.mediaService.getMediaListObservable().subscribe(newMediaList => {
+      this.mediaList = newMediaList;
+    });
     this.mediaList = this.mediaService.getMediaService();
   }
-  mediaService = new MediaService();
-  
+
   onDelete(id: number) {
     console.log(id);
-    this.mediaService.onDeleteService(id);this.mediaList = this.mediaService.getMediaService();
+    this.mediaService.onDeleteService(id);
   }
-  mediaList = this.mediaService.getMediaService();
-
 }
