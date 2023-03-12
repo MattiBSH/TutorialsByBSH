@@ -1,0 +1,24 @@
+input{
+    width: 50%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.centrum{
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    box-shadow: 0 0 10px #ccc;
+    padding: 2%;
+    background-color: rgb(150, 209, 255);
+    height: 40%;
+}
